@@ -13,7 +13,7 @@ const app = express();
 app.use(cors(
   {
       // credentials:true,
-      origin:"http://localhost:3000"
+      origin:"https://newchatapp-frontend.onrender.com"
   }
 ))  //position matters
 app.use(express.json()); 
@@ -35,7 +35,7 @@ mongoose.connect(process.env.MONGO_URL
 
 const io= socket(server,{
   cors:{
-    origin:"http://localhost:3000",
+    origin:"https://newchatapp-frontend.onrender.com",
     credentials:true,
   }
 })
