@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { v4 as uuidv4 } from "uuid"
 import ScrollToBottom from "react-scroll-to-bottom";
 
-function ChatMessages({ extractedMsg }) {
+function ChatMessages({ extractedMsg  }) {
 
   const scrollRef = useRef();
 
@@ -17,7 +17,7 @@ function ChatMessages({ extractedMsg }) {
 
   return (
 
-    <Container className="chat-container" >
+    <Container className="chat-container"  >
 
       {
         extractedMsg.map((msg) => {
@@ -35,6 +35,7 @@ function ChatMessages({ extractedMsg }) {
 
                 <div className="content">
 
+                {msg.from_me && <span className="sender-label">You</span>}
                   <p >
                     {msg.message}
 
@@ -66,6 +67,8 @@ const Container = styled.div`
     gap: 1rem;
     overflow: auto;
 
+ 
+
     &::-webkit-scrollbar{
         width: 0.4rem;
         &-thumb{
@@ -74,6 +77,15 @@ const Container = styled.div`
             border-radius: 1rem;
         }
     }
+
+
+    .sender-label {
+  font-size: 0.6rem; /* Small text */
+  font-weight: bold;  /* Make it bold */
+  color: #014105;     /* Light green color to make it stand out */
+  margin-bottom: 2px; /* Adds some space between the label and the message */
+  display: block;     /* Ensures it takes its own line */
+}
 
     .chat-msg{
 
@@ -88,10 +100,11 @@ display: flex;
 .content{
   max-width: 40%;
 overflow-wrap: break-word;
-font-size: 1.5rem;
+font-size: 1rem;
 padding: 0.8rem;
 border-radius: 1rem;
-
+//changes
+min-width: 8rem;
 
 }
 
@@ -127,7 +140,8 @@ padding: 0.5rem;
 
 }
 }
- 
+
+
 
 
 

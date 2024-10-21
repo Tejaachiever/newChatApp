@@ -107,11 +107,16 @@ function Chat() {
 
       <div className="container">
 
-        <Contacts contacts={contacts} current_user={current_user} change_chat={handle_chat_change} />
+        <Contacts contacts={contacts} current_user={current_user} change_chat={handle_chat_change} 
+        
+
+        />
 
 {
  current_userloaded && current_chat===undefined ? (<Welcome current_user={current_user} />)
-  :(<ChatContainer current_chat={current_chat} current_user={current_user} socket={socket} remove_chat={remove_curr_chat} />)
+  :(<ChatContainer current_chat={current_chat} current_user={current_user} socket={socket} remove_chat={remove_curr_chat} 
+   
+  />)
 }
       
 
@@ -130,9 +135,9 @@ const Container= styled.div`
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; //changes
   gap: 1rem;
-  align-items: center;
+  align-items:center;
   justify-content: center;
 
   .container{

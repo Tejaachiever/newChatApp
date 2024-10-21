@@ -229,7 +229,7 @@ Upload Profile picture
   Create User
 </button>
 
-<span>already have an account ? <Link to="/login" >  Login </Link>
+<span>Already have an Account ? <Link to="/login" >  Login </Link>
   </span>
   {
     /*
@@ -256,7 +256,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background-color:#6fa2b7;
+background-color:#25282a;
 gap:1.5rem;
 
 .brand{
@@ -315,6 +315,7 @@ input{
     border:  0.3rem solid  #5ccb41;
   }
   text-align: center;
+  font-style: italic;
 
   
 }
@@ -366,8 +367,11 @@ button{
 
 span{
   color: white;
-  text-transform: uppercase;
+  
   padding: 2rem 0;
+  font-size:1rem;
+  text-align: center;
+  
   
 
   a{

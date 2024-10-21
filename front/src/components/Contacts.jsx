@@ -33,16 +33,15 @@ function Contacts({ contacts, current_user, change_chat }) {
 
 
 
-
     return (
         <>
             {
-                current_username && (
-                    <Container>
-                        <div className="brand">
+               current_username && (
+                    <Container  >
+                        <div className="brand" >
                             <h3>chatX</h3>
                         </div>
-                        <div className="all-contacts">
+                        <div   className="all-contacts">
                             {
 //this is according to syntax of .map() func of array in JS
 //.map() needs a func whose first param is assigned the current element
@@ -96,12 +95,15 @@ function Contacts({ contacts, current_user, change_chat }) {
 
 const Container = styled.div`
 
-display: grid;
+ display: grid;
 grid-template-rows: 10% 75% 15%;
 overflow: hidden;
 background-color: #360303  ;
 border: solid grey 0.1rem;
-border-radius: 1rem 0 0 1rem;
+border-radius: 1rem 0 0 1rem; 
+
+   
+
 
 
 .brand{
@@ -133,6 +135,8 @@ border-radius: 1rem 0 0 1rem;
     overflow-x: hidden;
     overflow-y: auto;
     gap: 0.8rem;
+    //changes
+
 
     &::-webkit-scrollbar{
         width: 0.3rem;

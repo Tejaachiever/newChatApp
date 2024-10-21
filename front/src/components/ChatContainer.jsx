@@ -145,7 +145,7 @@ socket.current.emit("send-msg",{
       
     </div>
 
-    <ChatMessages  extractedMsg={extractedMsg} />
+    <ChatMessages extractedMsg={extractedMsg} />
 
     <ChatInput  handleSentMsg={handleSentMsg} />
 
@@ -157,8 +157,12 @@ socket.current.emit("send-msg",{
 }
 
 const Container= styled.div`
-    color: white;
 
+
+
+
+    color: white;
+    
     display: grid;
     grid-template-rows: 10% 75% 15%;
     overflow: hidden;
@@ -166,6 +170,7 @@ const Container= styled.div`
 
     @media screen and (min-width:720px) and (max-width:1080px) {
  grid-template-rows:15%  70% 15%;
+ width: auto;
 
     }
 
@@ -264,6 +269,8 @@ border-radius: 0.5rem;
 
       
 }
+
+
 
 
 

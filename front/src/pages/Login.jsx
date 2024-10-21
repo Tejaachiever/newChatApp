@@ -163,8 +163,7 @@ const handleChange=(event)=>{
   Login
 </button>
 
-<span>New Here ? <Link to="/register" >  Register </Link>
-  </span>
+<span>New Here ? <Link to="/register" >  Register </Link></span>
 
        </form>
 
@@ -205,6 +204,7 @@ form{
   padding: 1rem 5rem ;
   border-radius: 2rem;
   height: auto;
+  max-width: 85%;
   
 
 
@@ -217,6 +217,7 @@ input{
   border: 3px solid black;
   font-size: 1rem;
   border-radius: 1rem;
+  font-style: italic;
   
   &:focus{
     border:  0.3rem solid  #5ccb41;
@@ -328,11 +329,14 @@ button{
 
 span{
   color: white;
-  text-transform: uppercase;
+  
   padding-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.9rem;
+  font-size:1rem;
+  text-align: center;
+  justify-content: center;
   
 
   a{
